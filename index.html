@@ -9,18 +9,32 @@
 <body>
     <div class="container">
         <div class="todo-app">
-            <h2>To-Do List <img src="images/icon.png" alt="icon"></h2>
+            <h2>To-Do List 📝</h2>
             <div class="row">
-                <input type="text" id="input-box" placeholder="Add your task">
-                <button onclick="addTask()">Add</button>
+                <input type="text" id="input-box" placeholder="Nhập công việc ở đây">
+                <button onclick="addTask()">Thêm</button>
             </div>
-            <ul id="list-container">
-                <!-- <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li> -->
-            </ul>
+            <ul id="list-container"></ul>
         </div>
     </div>
-<script src="script.js"></script>
+
+    <!-- Modal popup -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <h3>Chi tiết Task</h3>
+            
+            <label>Thời hạn cuối cùng:</label>
+            <input type="date" id="task-date">
+            
+            <label>Danh sách việc cần làm:</label>
+            <div id="checklist-list"></div>
+            <input type="text" id="checklist-input" placeholder="Thêm mục vào danh sách">
+            <button onclick="addChecklist()">Thêm</button>
+            
+            <button onclick="closeModal()">Đóng</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
